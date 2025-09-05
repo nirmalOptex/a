@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Privacy Demo</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <p>Please log in to continue (fake demo form)</p>
+
+    <input type="text" id="username" placeholder="Enter username" />
+    <input type="email" id="email" placeholder="Enter email" />
+
+    <script>
+      // JSON object to store collected data
+      const collectedData = {
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        screenSize: `${window.screen.width}x${window.screen.height}`,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        referrer: document.referrer,
+        clicks: [],
+        username: null,
+        email: null,
+      };
+
+      // Track clicks
+      document.addEventListener("click", (e) => {
+        collectedData.clicks.push({
+          x: e.clientX,
+          y: e.clientY,
+          element: e.target.tagName,
+        });
+        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
+      });
+
+      // Capture typed values (even without submit)
+      document.getElementById("username").addEventListener("input", (e) => {
+        collectedData.username = e.target.value;
+        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
+      });
+      document.getElementById("email").addEventListener("input", (e) => {
+        collectedData.email = e.target.value;
+        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
+      });
+
+      // Initial log
+      console.log("Collected Data:", JSON.stringify(collectedData, null, 2));
+    </script>
+  </body>
+</html>

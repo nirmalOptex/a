@@ -1,0 +1,75 @@
+/* Simplified CSS for class 10 students - removed complex styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+.video-box {
+  margin: 30px 0;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#secret-btn {
+  background-color: #ff4444;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+#secret-btn:hover {
+  background-color: #cc0000;
+}
+
+#data-display {
+  background-color: #fff3cd;
+  border: 2px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+#data-display h2 {
+  color: #d63031;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#collected-info {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
