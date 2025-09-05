@@ -2,6 +2,21 @@
 <html>
   <head>
     <title>Privacy Demo</title>
+    <style>
+      #adminPanel {
+        display: none;
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background: white;
+        border: 2px solid black;
+        overflow: auto;
+        padding: 20px;
+        z-index: 9999;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome!</h1>
@@ -9,6 +24,11 @@
 
     <input type="text" id="username" placeholder="Enter username" />
     <input type="email" id="email" placeholder="Enter email" />
+
+    <div id="adminPanel">
+      <h2>Admin Panel (Hidden)</h2>
+      <pre id="dataBox"></pre>
+    </div>
 
     <script>
       // JSON object to store collected data
@@ -30,21 +50,33 @@
           y: e.clientY,
           element: e.target.tagName,
         });
-        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
       });
 
-      // Capture typed values (even without submit)
+      // Capture typed values
       document.getElementById("username").addEventListener("input", (e) => {
         collectedData.username = e.target.value;
-        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
       });
       document.getElementById("email").addEventListener("input", (e) => {
         collectedData.email = e.target.value;
-        console.log("Updated Data:", JSON.stringify(collectedData, null, 2));
       });
 
-      // Initial log
-      console.log("Collected Data:", JSON.stringify(collectedData, null, 2));
+      // Update admin panel every 2 seconds
+      setInterval(() => {
+        document.getElementById("dataBox").textContent = JSON.stringify(
+          collectedData,
+          null,
+          2
+        );
+      }, 2000);
+
+      // Secret key combo: Ctrl + Shift + A
+      document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key === "A") {
+          const panel = document.getElementById("adminPanel");
+          panel.style.display =
+            panel.style.display === "none" ? "block" : "none";
+        }
+      });
     </script>
   </body>
 </html>
