@@ -1,0 +1,24 @@
+
+===== User Submission =====
+Name: nirmal maharjan
+Email: mzn.nirmal700@gmail.com
+Browser: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+OS: Win32
+Language: en-US
+Cookies Enabled: true
+CPU Cores: 6
+Device Memory: 8 GB
+Touch Support: false
+Pointer: Mouse
+Screen: 2560x1440
+Viewport: 1920x959
+Online: true
+Timezone: Asia/Katmandu
+Connection: {"type":"Unknown","downlink":"Unknown","rtt":"Unknown"}
+Battery: {"level":1,"charging":true}
+Clicks: 4 positions recorded
+Mouse Movements: 62 positions recorded
+Scroll Positions: 0
+Key Presses: , 
+IP: ::1
+===========================
